@@ -1,0 +1,33 @@
+server:
+  port: 8888
+
+spring:
+  thymeleaf:
+    cache: true
+    check-template: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    excluded-view-names:
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: QWE123qwe
+    url: jdbc:mysql://localhost:13306/javaSec?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher  #解决swaggerUI不匹配接口
+
+swagger:
+  enable: true
+  title: JavaSecLib后端 API
+  description: API 描述
+  version: 5.0.0
+  author: whgojp
+  url: https://blog.csdn.net/weixin_53009585
+  email: whgojp@foxmail.com
