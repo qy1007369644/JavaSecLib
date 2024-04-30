@@ -20,7 +20,7 @@ public class SysLoginController {
     @GetMapping(value = {"", "/","/index"})
     public String index(){
         log.info("访问了index接口");
-        return "/index";
+        return "/page/login-1.html";
     }
 
     @RequestMapping("/user/login")
